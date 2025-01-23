@@ -76,15 +76,15 @@ BLOG_SERVICE_URL=http://blog-service:5002/api/blogs
 ### User Service (.env)
 
 ```env
-MONGO_URI=mongodb+srv://ahmadyaqoob89:NXr4srDANgEg1w5g@efc.054mo.mongodb.net/users
-JWT_SECRET=b1a7f43b8a2c4d3c4a3e5e5c2e6f12b7458f4b59e1cd6789f1427b4e0f8c6a1a
+MONGO_URI=mongodb://localhost:27017/users
+JWT_SECRET=your_secrete
 PORT=5001
 ```
 
 ### Blog Service (.env)
 
 ```env
-MONGO_URI=mongodb+srv://ahmadyaqoob89:NXr4srDANgEg1w5g@efc.054mo.mongodb.net/blogs
+MONGO_URI=mongodb://localhost:27017/blogs
 PORT=5002
 USER_SERVICE_URL=http://user-service:5001/api/users
 
