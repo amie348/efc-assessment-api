@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  user-service:
+    build:
+      context: ./user-service
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./user-service/.env
+
+  blog-service:
+    build:
+      context: ./blog-service
+    ports:
+      - "5002:5002"
+    env_file:
+      - ./blog-service/.env
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./api-gateway/.env
+    depends_on:
+      - user-service
+      - blog-service
